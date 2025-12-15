@@ -1,1 +1,64 @@
+/* 基本設定 */
+body {
+    font-family: 'Hiragino Mincho ProN', 'MS PMincho', serif; /* 明朝体で和の雰囲気を出す */
+    color: #333; /* 文字色を濃いグレーに */
+    background-color: #f7f7f7; /* 背景色を薄いグレーで落ち着いた印象に */
+    line-height: 1.8; /* 行の高さを広めにして読みやすく */
+    margin: 0;
+    padding: 20px;
+}
+
+/* コンテンツの幅を制限し中央寄せ */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* コンテンツ部分の背景を白に */
+    padding: 30px;
+    border-radius: 5px; /* 角を少し丸く */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* わずかな影をつけて立体感を出す */
+}
+
+/* 見出しの設定 */
+h1 {
+    font-size: 28px;
+    color: #006400; /* 深い緑色で見出しを強調 */
+    border-bottom: 2px solid #b8d2b8; /* 下線で区切りをつける */
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* タイトルの設定 */
+title {
+    /* HTMLの<title>タグはCSSで直接スタイリングできませんが、
+       今回はbodyのfont-familyで代用します */
+}
+
+/* 段落の設定 */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify; /* 両端揃えで整った印象に */
+}
+
+/* リンクの設定 */
+a {
+    color: #4682b4; /* やや落ち着いた青色 */
+    text-decoration: none; /* デフォルトの下線を消す */
+}
+
+a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+    color: #1e90ff; /* ホバー時は明るい青に */
+}
+
+/* HTML側でbodyタグ内の要素を<div class="container">で囲むと、より意図したデザインになります。 */
+/* 例:
+<body>
+  <div class="container">
+    <h1>戸定邸紹介</h1>
+    <p>...</p>
+  </div>
+</body>
+*/
 
