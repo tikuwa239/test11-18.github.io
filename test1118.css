@@ -5,41 +5,48 @@ body {
     /* 明朝体で和風の落ち着きを出す */
     font-family: 'Hiragino Mincho ProN', 'MS PMincho', serif; 
     color: #333;
-    background-color: #fcfcfc; /* 非常に薄いグレーの背景 */
-    line-height: 1.7; /* 読みやすい行間 */
+    background-color: #f5f5dc; /* 薄いベージュ（和の色：生成り色に近い）*/
+    line-height: 1.8; /* 読みやすい行間をさらに広げる */
     margin: 0;
     padding: 20px;
 }
 
 /* ページ全体のコンテナ設定 */
 .container {
-    max-width: 700px; /* 幅を狭くして、シンプルな文書のような体裁に */
+    max-width: 760px; /* 幅を少し広げてゆとりを出す */
     margin: 0 auto; /* 中央寄せ */
-    padding: 30px 40px;
-    background-color: #fff;
-    border: 1px solid #e0e0e0; /* わずかな境界線 */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* 軽い影 */
+    padding: 40px 50px;
+    background-color: #fff; /* コンテンツ背景は白 */
+    border: 5px solid #a52a2a; /* 茶色系の和風の枠線 */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* 深めの影 */
 }
 
 /* ====================================
    2. 見出しと区切り
    ==================================== */
+header {
+    margin-bottom: 40px;
+}
+
 h1 {
-    font-size: 30px;
-    color: #005000; /* 深い緑 */
+    font-size: 32px;
+    color: #005000; /* 深い緑色（常磐色のイメージ） */
     text-align: center;
-    border-bottom: 2px solid #c8e6c9; /* 淡いグリーンの下線 */
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+    border-bottom: 4px double #8fbc8f; /* 和風の二重線で区切り */
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    letter-spacing: 2px; /* 文字間隔を広げ、風格を出す */
 }
 
 h2 {
     font-size: 24px;
-    color: #38761d; /* 落ち着いた緑 */
-    padding-left: 10px;
-    border-left: 5px solid #a4c6a4; /* 左の縦線で強調 */
-    margin-top: 40px;
-    margin-bottom: 20px;
+    color: #4b5320; /* 渋めのオリーブグリーン */
+    background-color: #e6e8d2; /* 薄い緑系の背景 */
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    border-left: none; /* 前のCSSで使った縦線は削除 */
 }
 
 /* ====================================
@@ -47,37 +54,48 @@ h2 {
    ==================================== */
 p {
     margin-bottom: 1.5em;
+    padding: 0 10px; /* 左右に少しパディングを加えて、テキストにゆとりを出す */
     text-indent: 1em; /* 段落の始まりを字下げ */
+    line-height: 1.8;
 }
 
-/* リスト（見どころ） */
+/* リスト（見どころ）を装飾 */
 ul {
-    padding-left: 20px;
+    padding: 15px 30px;
     margin-bottom: 30px;
+    list-style-type: none; /* デフォルトの黒点を消す */
+    background-color: #f9f9f9;
+    border: 1px dashed #c0c0c0; /* 点線で区切りを強調 */
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 16px;
+    color: #2f4f4f; /* 濃いめの青緑（ダークスレートグレー） */
+    padding-left: 15px;
+    position: relative;
 }
 
-/* アクセスの注釈 */
-.note {
-    font-size: 14px;
-    color: #888;
-    text-indent: 0; /* 字下げを解除 */
-    border-top: 1px dotted #ccc;
-    padding-top: 10px;
+/* カスタムのリストマーカー（和風の装飾） */
+li::before {
+    content: "◇"; /* ひし形の記号を使う */
+    color: #a52a2a; /* 茶色系のアクセントカラー */
+    position: absolute;
+    left: 0;
 }
+
+/* アクセスの注釈を削除したため、`.note`のスタイルは不要ですが、
+   残りの`p`タグのスタイルが適用されます。 */
+
 
 /* ====================================
    4. フッター
    ==================================== */
 footer {
-    text-align: center;
-    margin-top: 40px;
+    text-align: right; /* 右寄せに変更 */
+    margin-top: 50px;
     padding-top: 15px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px dashed #c0c0c0;
     color: #777;
-    font-size: 14px;
+    font-size: 13px;
 }
