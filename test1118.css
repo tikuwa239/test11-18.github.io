@@ -1,64 +1,83 @@
-/* 基本設定 */
+/* ====================================
+   1. 基本設定
+   ==================================== */
 body {
-    font-family: 'Hiragino Mincho ProN', 'MS PMincho', serif; /* 明朝体で和の雰囲気を出す */
-    color: #333; /* 文字色を濃いグレーに */
-    background-color: #f7f7f7; /* 背景色を薄いグレーで落ち着いた印象に */
-    line-height: 1.8; /* 行の高さを広めにして読みやすく */
+    /* 明朝体で和風の落ち着きを出す */
+    font-family: 'Hiragino Mincho ProN', 'MS PMincho', serif; 
+    color: #333;
+    background-color: #fcfcfc; /* 非常に薄いグレーの背景 */
+    line-height: 1.7; /* 読みやすい行間 */
     margin: 0;
     padding: 20px;
 }
 
-/* コンテンツの幅を制限し中央寄せ */
+/* ページ全体のコンテナ設定 */
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff; /* コンテンツ部分の背景を白に */
-    padding: 30px;
-    border-radius: 5px; /* 角を少し丸く */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* わずかな影をつけて立体感を出す */
+    max-width: 700px; /* 幅を狭くして、シンプルな文書のような体裁に */
+    margin: 0 auto; /* 中央寄せ */
+    padding: 30px 40px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0; /* わずかな境界線 */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* 軽い影 */
 }
 
-/* 見出しの設定 */
+/* ====================================
+   2. 見出しと区切り
+   ==================================== */
 h1 {
-    font-size: 28px;
-    color: #006400; /* 深い緑色で見出しを強調 */
-    border-bottom: 2px solid #b8d2b8; /* 下線で区切りをつける */
+    font-size: 30px;
+    color: #005000; /* 深い緑 */
+    text-align: center;
+    border-bottom: 2px solid #c8e6c9; /* 淡いグリーンの下線 */
     padding-bottom: 10px;
-    margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-/* タイトルの設定 */
-title {
-    /* HTMLの<title>タグはCSSで直接スタイリングできませんが、
-       今回はbodyのfont-familyで代用します */
-}
-
-/* 段落の設定 */
-p {
-    font-size: 16px;
+h2 {
+    font-size: 24px;
+    color: #38761d; /* 落ち着いた緑 */
+    padding-left: 10px;
+    border-left: 5px solid #a4c6a4; /* 左の縦線で強調 */
+    margin-top: 40px;
     margin-bottom: 20px;
-    text-align: justify; /* 両端揃えで整った印象に */
 }
 
-/* リンクの設定 */
-a {
-    color: #4682b4; /* やや落ち着いた青色 */
-    text-decoration: none; /* デフォルトの下線を消す */
+/* ====================================
+   3. テキスト要素
+   ==================================== */
+p {
+    margin-bottom: 1.5em;
+    text-indent: 1em; /* 段落の始まりを字下げ */
 }
 
-a:hover {
-    text-decoration: underline; /* ホバー時に下線を表示 */
-    color: #1e90ff; /* ホバー時は明るい青に */
+/* リスト（見どころ） */
+ul {
+    padding-left: 20px;
+    margin-bottom: 30px;
 }
 
-/* HTML側でbodyタグ内の要素を<div class="container">で囲むと、より意図したデザインになります。 */
-/* 例:
-<body>
-  <div class="container">
-    <h1>戸定邸紹介</h1>
-    <p>...</p>
-  </div>
-</body>
-*/
+li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
 
+/* アクセスの注釈 */
+.note {
+    font-size: 14px;
+    color: #888;
+    text-indent: 0; /* 字下げを解除 */
+    border-top: 1px dotted #ccc;
+    padding-top: 10px;
+}
+
+/* ====================================
+   4. フッター
+   ==================================== */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    color: #777;
+    font-size: 14px;
+}
